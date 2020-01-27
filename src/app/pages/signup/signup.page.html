@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar style="--background: #002e6e; color: white;">
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <form #form="ngForm">
+      <ion-item>
+        <ion-input type="email" name="email" placeholder="Email" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" name="password" placeholder="Password" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" name="nickName" placeholder="Nick Name" ngModel></ion-input>
+      </ion-item><br>
+      <ion-button (click)="signup(form)" style="--background: #002e6e; color: white;">Sign Up</ion-button>
+    </form>
+</ion-content>

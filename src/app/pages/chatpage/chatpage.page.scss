@@ -1,0 +1,117 @@
+
+/////////////////////////////////////////////////////////////
+
+.footerSections{
+    --background:#002e6e;
+    background: #002e6e;
+}
+
+.footer{
+    // min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.containerFooter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.inputConatiner{
+    width:80%;
+    margin-left: 5px;
+}
+
+.inputMessage{
+    border: 1px solid #d8d8e0;
+    border-radius: 10px;
+}
+
+.inputBg{
+    background:#fff;
+}
+
+.send-button-parent{
+    padding: 0 6px 0 8px;
+}
+
+.sendBtn{
+    opacity: 1 !important;
+    height: 40px;
+}
+
+.sendBtn-icon{
+    // margin-top: -12px;
+    font-size: 30px;
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+  
+  .chat-message {
+      border-radius: 5px;
+      display: inline-block;
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-right: 10px;
+      position: relative;
+      margin: 8px;
+      max-width: 80%;
+      font-size: 17px;
+  }
+  
+  .chat-message:before {
+      content: "\00a0";
+      display: block;
+      height: 16px;
+      width: 9px;
+      position: absolute;
+      bottom: -7.5px;
+  }
+  
+  .chat-message.right {
+      background-color: #002e6e;
+      color: #fff;
+      min-width: 50%;
+      float: right;
+  }
+  
+  .chat-message.right:before {
+      background-color: #002e6e;
+      right: 10px;
+      -webkit-transform: rotate(118deg) skew(-5deg);
+      transform: rotate(118deg) skew(-5deg);
+  }
+  
+  .chat-message.left {
+      background-color: #00B9F1;
+      color: #fff;
+      float: left;
+      min-width: 50%;
+      }
+  
+  .chat-message.left:before {
+      background-color: #00B9F1;
+      left: 10px;
+      -webkit-transform: rotate(70deg) skew(5deg);
+      transform: rotate(70deg) skew(5deg);
+  }
+
+  .sender-timestamp{
+    font-size: 8px;
+    float: right;
+    padding-right: 12px;
+    color: #00B9F1;
+  }
+
+  .reciever-timestamp{
+    font-size: 8px;
+    float: right;
+    padding-right: 5px;
+    color: #002e6e;
+  }
+
+  .message-details{
+    padding-bottom: 7px;
+  }

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar style="--background: #002e6e; color: white;">
+    <ion-title>
+      Chats
+      <ion-icon name="person-add" style="float: right;font-size: 23px;"></ion-icon>
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngFor="let user of friends">
+    <ion-item (click)="chat(user)">
+      <ion-avatar slot="start" style="height: 55px; width: 55px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThpR_4r3jzlXj4WGTP4nyMYmy8ng8q2fBk4poUEs7bOCKp1-YDyA&s">
+      </ion-avatar>
+      <ion-label style="font-size: 20px;">{{user.displayName}}</ion-label>
+    </ion-item>
+  </ng-container>
+</ion-content>

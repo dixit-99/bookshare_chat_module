@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar style="--background: #002e6e; color: white;">
+    <ion-title>{{user.displayName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #scrollElement>
+
+  <div *ngFor="let item of allmessages">
+    <div class="chat-message left" *ngIf="item.sentby === user.uid">
+	    <div class="message-details">
+        {{item.message}}
+      </div>
+      <div class="reciever-timestamp">{{item.timestamp | date:'dd/MM/yy hh:mm a'}}</div>
+    </div>
+    <div class="chat-message right" *ngIf="item.sentby != user.uid">
+	    <div class="message-details">
+        {{item.message}}
+      </div>
+      <div class="sender-timestamp">{{item.timestamp | date:'dd/MM/yy hh:mm a'}}</div>
+    </div>
+  </div>
+
+</ion-content>
+
+
+<ion-footer class="footer">
+  <ion-toolbar class="footerSections">
+    <div class="containerFooter">
+      <div class="inputConatiner">
+        <ion-input class="placeholdertext inputMessage inputBg" type="text" placeholder="Type a message" [(ngModel)]="newmessage"
+          autofocus="false" padding-start></ion-input>
+      </div>
+      <div class="send-button-parent">
+        <ion-button (click)="addmessage()" class="sendBtn" color="primary">
+          <ion-icon class="sendBtn-icon" name="send" color="light"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+
